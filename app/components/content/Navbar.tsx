@@ -29,7 +29,7 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 100,
-        padding: '1.2rem 2.5rem',
+        padding: '1rem clamp(1rem, 4vw, 2.5rem)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -153,20 +153,38 @@ export default function Navbar() {
       </button>
 
       {/* Mobile Menu */}
-      {menuOpen && (
+      <div
+        className={`mobileMenu ${menuOpen ? 'showMenu' : ''}`}
+      >
         <div
           style={{
             position: 'fixed',
-            top: '60px',
-            left: 0,
+
+            top: '78px',
             right: 0,
-            background: 'rgba(10,22,40,0.98)',
-            backdropFilter: 'blur(20px)',
+
+            width: '280px',
+            height: 'calc(100vh - 78px)',
+
+            background: 'rgba(5,5,5,0.96)',
+
+            backdropFilter: 'blur(30px)',
+
             padding: '2rem',
+
             display: 'flex',
             flexDirection: 'column',
-            gap: '1.5rem',
-            borderBottom: '1px solid var(--border)',
+
+            gap: '2rem',
+
+            borderLeft: '1px solid rgba(200,169,110,0.15)',
+
+            boxShadow:
+              '-10px 0 40px rgba(0,0,0,0.5)',
+
+            transition: '0.4s ease',
+
+            zIndex: 999,
           }}
         >
           {links.map((link, i) => (
@@ -190,9 +208,48 @@ export default function Navbar() {
             </button>
           ))}
         </div>
-      )}
+      </div>
 
       <style jsx>{`
+
+      .mobileMenu {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.showMenu {
+  transform: translateX(0%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileMenu button {
+  transition: 0.3s;
+}
+
+.mobileMenu button:hover {
+  color: var(--gold);
+  transform: translateX(8px);
+}
+
+.desktop-nav button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0%;
+  height: 1px;
+
+  background: var(--gold);
+
+  transition: 0.3s;
+}
+
+.desktop-nav button:hover::after {
+  width: 100%;
+}
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .hamburger { display: flex !important; }

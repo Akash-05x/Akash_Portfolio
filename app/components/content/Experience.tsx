@@ -83,7 +83,7 @@ export default function Experience() {
         </div>
 
         {/* MAIN GRID */}
-        <div
+        <div className="profileGrid"
           style={{
             display: 'grid',
             gridTemplateColumns: '240px 1fr',
@@ -447,11 +447,22 @@ export default function Experience() {
             }
           }
 
-          @media (max-width: 768px) {
-            div[style*='grid-template-columns: 240px'] {
-              grid-template-columns: 1fr !important;
-            }
-          }
+          /* TABLET */
+  @media (max-width: 900px) {
+    .profileGrid {
+      grid-template-columns: 180px 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  /* MOBILE */
+  @media (max-width: 360px) {
+    .profileGrid {
+      grid-template-columns:100px 1fr;
+      text-align: center;
+    }
+  }
+
         `}</style>
       </section>
     </Reveal>
