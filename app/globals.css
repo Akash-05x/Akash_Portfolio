@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0a1628;
+  --navy-mid: #112240;
+  --navy-light: #1e3a5f;
+  --gold: #c8a96e;
+  --gold-light: #e8c98e;
+  --white: #f8f9fc;
+  --text-muted: #8892a4;
+  --border: rgba(200, 169, 110, 0.2);
+  --card-bg: rgba(17, 34, 64, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  z-index: 999;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+
+/* =========================
+   RESPONSIVE SYSTEM
+========================= */
+
+/* Ultra Large Screens */
+@media (min-width: 1600px) {
+  html {
+    font-size: 18px;
+  }
+
+  section {
+    max-width: 1500px !important;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  section {
+    padding: 6rem 2rem !important;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 7vw, 5rem) !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+
+  .project-card,
+  .about-grid,
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-visual {
+    height: 280px !important;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 10vw, 4.5rem) !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  section {
+    padding: 5rem 1.5rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 4rem 1rem !important;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+  }
+
+  h2 {
+    font-size: 1.8rem !important;
+  }
+
+  p {
+    font-size: 0.92rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .project-visual {
+    height: 220px !important;
+  }
+
+  .floating-ai {
+    width: 120px !important;
+    height: 120px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+  }
+
+  .tech-pill {
+    font-size: 0.65rem !important;
+    padding: 0.45rem 0.7rem !important;
+  }
+
+  .project-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .project-visual {
+    height: 180px !important;
+  }
+}
