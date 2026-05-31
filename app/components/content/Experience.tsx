@@ -92,6 +92,7 @@ export default function Experience() {
         >
           {/* LEFT SIDEBAR */}
           <div
+            className="experienceSidebar"
             style={{
               position: 'relative',
             }}
@@ -115,9 +116,14 @@ export default function Experience() {
                 key={e.company}
                 onClick={() => setActive(i)}
                 style={{
+
+                  minWidth: '240px',
+                  width: 'auto',
+
+
                   position: 'relative',
 
-                  width: '100%',
+
 
                   background:
                     active === i
@@ -183,6 +189,7 @@ export default function Experience() {
           {/* EXPERIENCE CARD */}
           <div
             key={active}
+            className="experienceCard"
             style={{
               position: 'relative',
 
@@ -287,11 +294,11 @@ export default function Experience() {
                 </h3>
 
                 <div
+                  className="experienceMeta"
                   style={{
                     display: 'flex',
                     flexWrap: 'wrap',
                     gap: '0.7rem',
-
                     alignItems: 'center',
                   }}
                 >
@@ -447,21 +454,35 @@ export default function Experience() {
             }
           }
 
-          /* TABLET */
-  @media (max-width: 900px) {
-    .profileGrid {
-      grid-template-columns: 180px 1fr;
-      gap: 1.5rem;
-    }
+/* TABLET */
+@media (max-width: 900px) {
+  .profileGrid {
+    grid-template-columns: 180px 1fr;
+    gap: 1.5rem;
   }
+}
 
-  /* MOBILE */
-  @media (max-width: 360px) {
-    .profileGrid {
-      grid-template-columns:100px 1fr;
-      text-align: center;
-    }
+/* MOBILE */
+@media (max-width: 768px) {
+  .profileGrid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
   }
+      .experienceCard > div {
+    padding: 1.5rem !important;
+  }
+     .experienceMeta {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.4rem !important;
+  }
+     .experienceSidebar {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
 
         `}</style>
       </section>

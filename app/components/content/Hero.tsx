@@ -90,6 +90,7 @@ export default function Hero() {
           display: 'flex',
           alignItems: 'center',
           overflow: 'visible',
+          maxWidth: '1000px', margin: '0 auto'
 
 
         }}
