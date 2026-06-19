@@ -259,7 +259,7 @@ export default function Contact() {
             { label: 'LinkedIn', url: 'https://linkedin.com/in/akash-s-a203592a1' },
             { label: 'Twitter', url: 'https://x.com/AKASH__05' },
             { label: 'Instagram', url: 'https://www.instagram.com/_akash05._/' },
-            { label: 'Email', url: 'mailto:akashcrazy2004@gmail.com' },
+            { label: 'Email', url: 'mailto:akashs052004@gmail.com' },
           ].map((link) => (
             <a
               key={link.label}

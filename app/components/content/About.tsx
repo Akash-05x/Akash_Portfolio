@@ -364,7 +364,7 @@ export default function About() {
                   >
                     {[
                       { label: 'Location', value: 'Thoothukudi' },
-                      { label: 'CGPA', value: '8.14' },
+                      { label: 'CGPA', value: '8.31' },
                       { label: 'Availability', value: 'Open to Work' },
                       { label: 'Education', value: 'B.E. CSE' },
                     ].map((item) => (

@@ -277,7 +277,7 @@ export default function Hero() {
           >
             {[
               { num: '2', label: 'Industry Internships' },
-              { num: '8.14', label: 'Current CGPA' },
+              { num: '8.31', label: 'Current CGPA' },
               { num: '8+', label: 'Technologies Learned' },
             ].map((s) => (
               <div key={s.label}>
