@@ -19,7 +19,7 @@ const projects = [
     description:
       'Developed a role-based online examination platform that streamlined user management and exam administration, ensuring a secure, efficient, and user- friendly experience.',
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Firebase'],
-    links: { github: 'https://github.com/Akash-05x/Role-Based-Online-Examination-Platform.git' },
+    links: { live: 'https://github.com/Akash-05x/Role-Based-Online-Examination-Platform.git' },
     image: '/role.png',
     featured: true,
   },
@@ -369,7 +369,7 @@ export default function Projects() {
                   }}
                 >
                   <a
-                    href={project.links.github}
+                    href={project.links.live}
                     target="_blank"
                     className="project-btn"
                     style={{
