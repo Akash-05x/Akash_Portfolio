@@ -5,11 +5,11 @@ import Reveal from './Reveal';
 const projects = [
   {
     number: '01',
-    title: 'Emergency Blood Request Management System',
+    title: 'BloodOn : Emergency Blood Request Management System',
     description:
       'Developed a real-time platform connecting hospitals with nearby blood donors using an intelligent matching algorithm, enabling faster response and efficient emergency coordination.',
     stack: ['Node.js', 'Java', 'PostgreSQL', 'React', 'Mapping APIs', 'Socket.IO'],
-    links: { github: 'https://github.com/Akash-05x/blooddonation.git' },
+    links: { live: 'https://bloodon.vercel.app/' },
     image: '/emer.png',
     featured: true,
   },
